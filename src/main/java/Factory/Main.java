@@ -28,22 +28,19 @@ class Bmw implements ICar {
 }
 
 abstract class CarFactory {
-    ICar buildCar() {
-        return getCar();
-    }
-    abstract protected ICar getCar();
+    abstract ICar buildCar();
 }
 
 class MercedesFactory extends CarFactory {
     @Override
-     protected ICar getCar() {
+    ICar buildCar() {
         return new Mercedes();
     }
 }
 
 class BmwFactory extends CarFactory {
     @Override
-    protected ICar getCar() {
+    ICar buildCar() {
         return new Bmw();
     }
 }
